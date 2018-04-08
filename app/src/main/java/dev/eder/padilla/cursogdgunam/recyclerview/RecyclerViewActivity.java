@@ -39,7 +39,8 @@ public class RecyclerViewActivity extends AppCompatActivity implements ItemInRec
         modelList.add(new Model(gokuImageUrl,"1","Goku",types[0],new PowerLevel("10","5")));
         modelList.add(new Model(vegetaImageUrl,"2","Vegeta",types[0],new PowerLevel("5","5")));
         modelList.add(new Model(piccoloImageUrl,"3","Piccolo",types[1],new PowerLevel("8","4")));
-        modelList.add(new Model(yamchaImageUrl,"4","Bulma",types[2],new PowerLevel("1","1")));
+        modelList.add(new Model(yamchaImageUrl,"4","Yamcha",types[2],new PowerLevel("1","1")));
+        modelList.add(new Model(bulmaImageUrl,"5","Bulma",types[2],new PowerLevel("1","1")));
         recyclerViewAdapter.notifyDataSetChanged();
     }
 
