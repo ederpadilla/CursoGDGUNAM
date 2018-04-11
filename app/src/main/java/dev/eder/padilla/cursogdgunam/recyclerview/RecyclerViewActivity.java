@@ -1,9 +1,12 @@
 package dev.eder.padilla.cursogdgunam.recyclerview;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -11,7 +14,9 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import dev.eder.padilla.cursogdgunam.R;
+import dev.eder.padilla.cursogdgunam.secondactivity.Main2Activity;
 import dev.eder.padilla.cursogdgunam.util.Util;
 
 public class RecyclerViewActivity extends AppCompatActivity implements ItemInRecyclerClicked,ItemLongClicked {
@@ -21,6 +26,8 @@ public class RecyclerViewActivity extends AppCompatActivity implements ItemInRec
     RecyclerViewAdapter recyclerViewAdapter;
 
     List<Model> modelList = new ArrayList<>();
+    Button mButton;
+    public static String nombreDelParametroQueVamosAMandar = "id";
 
     private String gokuImageUrl = "https://vignette.wikia.nocookie.net/dragonballfanon/images/7/7b/Dbds_44_3.jpg/revision/latest/scale-to-width-down/300?cb=20160831232618&path-prefix=es";
     private String vegetaImageUrl = "https://vignette.wikia.nocookie.net/dragonballfanon/images/0/01/Dbds_44_4.jpg/revision/latest?cb=20160831232623&path-prefix=es";
@@ -65,5 +72,12 @@ public class RecyclerViewActivity extends AppCompatActivity implements ItemInRec
         recyclerViewAdapter.notifyItemRemoved(position);
         recyclerViewAdapter.notifyItemRangeChanged(position,modelList.size());
         mrecView.scrollToPosition(position);
+    }
+    @OnClick(R.id.btn_java) public void dioElClickAlBoton(){
+        Log.e("Activity","click");
+        Intent intent = new Intent(this, Main2Activity.class);
+        intent.putExtra(nombreDelParametroQueVamosAMandar,100);
+        startActivity(intent);
+
     }
 }

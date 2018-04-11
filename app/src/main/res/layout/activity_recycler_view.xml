@@ -12,9 +12,15 @@
       android:layout_height="match_parent"
       tools:listitem="@layout/item_of_recycler_view"
       app:layoutManager="android.support.v7.widget.LinearLayoutManager"
-      android:orientation="vertical"
-      >
+      android:orientation="vertical">
 
   </android.support.v7.widget.RecyclerView>
+  <Button
+      android:id="@+id/btn_java"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentEnd="true"
+      android:layout_alignParentBottom="true"
+      android:text="Java sample"/>
 
 </RelativeLayout>
