@@ -78,6 +78,7 @@ public class RecyclerViewActivity extends AppCompatActivity implements ItemInRec
         Intent intent = new Intent(this, Main2Activity.class);
         intent.putExtra(nombreDelParametroQueVamosAMandar,100);
         startActivity(intent);
+        finish();
 
     }
 }
